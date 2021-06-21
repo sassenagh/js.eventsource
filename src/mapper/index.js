@@ -78,6 +78,13 @@ class EventsourceMapper
 
     return `process-${domain}-${name}-persisted`
   }
+  
+  toProcessInDomainPersistedChannel(domain)
+  {
+    domain = this.string.composeSeperatedLowerCase(domain)
+
+    return `process-${domain}-persisted`
+  }
 
   toProcessConsumerErrorChannel(domain, name)
   {
